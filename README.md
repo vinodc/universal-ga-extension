@@ -8,18 +8,15 @@ Configuration
     
 You just need to add this snippet code to the bottom of your pages (or create it in a separate .js) : 
 
-    ga = new ExtGA({
+    ga = new GA({
         trackingId : "UA-XXXX-XX", // Your Tracking Id
-        trackingDns : "my-extension.com", // Domain name that you created for the profile
-        appVersion : "1.0", // application Version
-        appName : "My App", // application Name
+        clientId: 10101; // User Id of my Application for crossdevice tracking
+        trackingDns : "my-extension.com", // (optional) Domain name that you created for the profile
+        appVersion : "1.0", // (optional) application Version
+        appName : "My App", // (optional) application Name
         getPref : MyTools.getPref, // (optional) If you want to use a custom function for localSettings
-        setPref : MyTools.setPref// (optional) If you want to use a custom function for localSettings
+        setPref : MyTools.setPref // (optional) If you want to use a custom function for localSettings
     });
-    
-You can also add the user Id just after defing "ga" object or later.
-    
-    ga.setUid(10101); // User Id of my Application for crossdevice tracking
     
 Usage
 ------------
@@ -46,5 +43,3 @@ Exception
 External Links
 ------------
 * [Google developer Measurement Protocol Parameter Reference](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters)
-
-    
